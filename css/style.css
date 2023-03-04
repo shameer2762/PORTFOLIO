@@ -1,0 +1,404 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 100%;
+}
+
+/* Navigation bar styling  */
+
+@media (min-width: 766px) {
+  .navigation-bar {
+    border: 0.17rem solid orangered;
+    color: rgb(13, 214, 232);
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 0, 0),
+      rgba(37, 37, 37, 0.983),
+      rgb(0, 0, 0)
+    );
+    border-radius: 10rem;
+    box-sizing: border-box;
+    padding-top: 0.4rem;
+    margin: 1rem;
+    position: fixed;
+    top: 25vh;
+    left: 5vh;
+    z-index: 100;
+  }
+
+  .navigation-bar-list {
+    list-style: none;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    /* padding-left: 0; */
+  }
+  .navigation-bar-list-item {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.1, 0.2, 0.22, 1);
+  }
+  .navigation-bar-list-item-link {
+    color: rgb(65, 239, 245);
+    /* padding-bottom: 1rem; */
+  }
+  .navigation-bar-list-item-link:hover,
+  .navigation-bar-list-item-link:active {
+    color: orangered;
+  }
+  .navigation-bar-list-item:hover {
+    color: orangered;
+    cursor: pointer;
+    transform: rotate(-30deg);
+  }
+}
+
+@media (max-width: 765px) {
+  .navigation-bar {
+    border: 0.17rem solid orangered;
+    padding: 0rem;
+    color: rgb(13, 214, 232);
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.888),
+      rgba(37, 37, 37, 0.858),
+      rgba(0, 0, 0, 0.898)
+    );
+    border-radius: 10rem;
+    box-sizing: border-box;
+    padding-top: 0.4rem;
+    margin: 1rem;
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+    width: 80vw;
+    z-index: 100;
+  }
+
+  .navigation-bar-list {
+    list-style: none;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .navigation-bar-list-item {
+    font-size: 1.5rem;
+    transition: all 0.5s cubic-bezier(0.1, 0.2, 0.22, 1);
+  }
+  .navigation-bar-list-item-link {
+    color: rgb(65, 239, 245);
+    /* padding-bottom: 1rem; */
+  }
+  .navigation-bar-list-item-link:hover,
+  .navigation-bar-list-item-link:active {
+    color: orangered;
+  }
+  .navigation-bar-list-item:hover {
+    color: orangered;
+    cursor: pointer;
+    transform: rotate(-30deg);
+  }
+}
+
+/* END OF NAVIGATION BAR STYLING  */
+
+/* Home section  */
+.home {
+  background-image: url("../img/background_banner.jpg");
+  background-size: cover;
+  /* background-repeat: none; */
+  width: 100vw;
+  height: 100vh;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.home-image {
+  height: 100vh;
+  width: 102vw;
+}
+.home-content {
+  z-index: 2;
+}
+
+/* End of Home section  */
+
+/* About section  */
+.about {
+  background-color: rgba(0, 0, 0, 0.828);
+}
+.about-heading {
+  grid-column: 3/-1;
+  color: orangered;
+  font-weight: bolder;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.853);
+  cursor: pointer;
+  width: 25rem;
+  padding: 0.4rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.about-heading:hover::before,
+.about-heading:hover::after,
+.skills-heading:hover::before,
+.skills-heading:hover::after,
+.projects-heading:hover::before,
+.projects-heading:hover::after,
+.contact-heading:hover::before,
+.contact-heading:hover::after {
+  content: "";
+  display: inline-block;
+  height: 0.1rem;
+  width: 4rem;
+  background-color: white;
+  margin: 0.3rem;
+  align-content: baseline;
+  cursor: pointer;
+  animation: lines 0.2s cubic-bezier(0.8, 0.6, 0.8, 1);
+  transition: all 2s;
+}
+
+@keyframes lines {
+  0% {
+    width: 1rem;
+  }
+  50% {
+    width: 3rem;
+  }
+  100% {
+    width: 4rem;
+  }
+}
+/* End of About section  */
+
+/* Skills section  */
+.skills {
+  background-color: rgba(18, 18, 18, 0.929);
+  height: 150vh;
+  background-size: cover;
+  color: white;
+  box-shadow: -4px 3px 8px rgba(14, 14, 14, 0.853);
+}
+.skills-heading {
+  text-align: center;
+  color: orangered;
+  font-weight: bolder;
+  box-shadow: 3px 3px 8px rgba(14, 14, 14, 0.853);
+  cursor: pointer;
+  width: 25rem;
+  padding: 0.4rem;
+  letter-spacing: 0.1rem;
+}
+.skill-html,
+.skill-css,
+.skill-javascript,
+.skill-bootstrap,
+.skill-react,
+.skill-python,
+.skill-sql,
+.skill-mongodb,
+.skill-node,
+.skill-github {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: relative;
+}
+/* .skill-css {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: relative;
+} */
+.outer {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(0, 0, 0, 0.793);
+}
+.inner {
+  height: 4rem;
+  width: 4rem;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(4, 4, 4, 0.7), -0.5px -0.5px 0 rgb(3, 3, 3),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5,
+.circle6,
+.circle7,
+.circle8,
+.circle9,
+.circle10 {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 14px;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+.circle1 {
+  animation: circle1 1.5s linear forwards;
+}
+.circle2 {
+  animation: circle2 1.5s linear forwards;
+}
+.circle3 {
+  animation: circle3 1.5s linear forwards;
+}
+.circle4 {
+  animation: circle4 1.5s linear forwards;
+}
+.circle5 {
+  animation: circle5 1.5s linear forwards;
+}
+.circle6 {
+  animation: circle6 1.5s linear forwards;
+}
+.circle7 {
+  animation: circle7 1.5s linear forwards;
+}
+.circle8 {
+  animation: circle8 1.5s linear forwards;
+}
+.circle9 {
+  animation: circle9 1.5s linear forwards;
+}
+.circle10 {
+  animation: circle10 1.5s linear forwards;
+}
+/* .circle2 {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 14px;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: circle2 1.5s linear forwards;
+} */
+
+@keyframes circle1 {
+  100% {
+    stroke-dashoffset: 180;
+  }
+}
+@keyframes circle2 {
+  100% {
+    stroke-dashoffset: 230;
+  }
+}
+@keyframes circle3 {
+  100% {
+    stroke-dashoffset: 255;
+  }
+}
+@keyframes circle4 {
+  100% {
+    stroke-dashoffset: 230;
+  }
+}
+@keyframes circle5 {
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+@keyframes circle6 {
+  100% {
+    stroke-dashoffset: 215;
+  }
+}
+@keyframes circle7 {
+  100% {
+    stroke-dashoffset: 215;
+  }
+}
+@keyframes circle8 {
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+@keyframes circle9 {
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+@keyframes circle10 {
+  100% {
+    stroke-dashoffset: 215;
+  }
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#number1,
+#number2,
+#number3,
+#number4,
+#number5,
+#number6,
+#number7,
+#number8,
+#number9,
+#number10 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+figcaption {
+  /* margin-left: 1rem; */
+  margin-top: 0.8rem;
+  text-align: center;
+  align-self: center;
+  /* letter-spacing: 0.07rem; */
+  color: aqua;
+  width: 6rem;
+  font-weight: 800;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 8px rgba(14, 14, 14, 0.853);
+}
+
+.html-css {
+  margin-bottom: 10rem;
+}
+.js-bootstrap {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 768px) {
+  .react-python {
+    margin-bottom: 10rem;
+  }
+  .skills {
+    height: 150vh;
+  }
+}
+.vertical-line {
+  height: 100vh;
+  /* color: orangered; */
+  background-color: orangered;
+  width: 0.5rem;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+}
+/* End of Skills section  */
