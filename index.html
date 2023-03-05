@@ -14,13 +14,14 @@
 <body>
   
   <!-- Navigation bar section  -->
+  <div class="vertical-line"></div>
   <section class="navigation-bar">
     <ul class="navigation-bar-list">
-      <li class="navigation-bar-list-item"><a href="#home" class="navigation-bar-list-item-link"><i class="bi bi-house-door-fill"></i></a></li>
-      <li class="navigation-bar-list-item"><a href="#about" class="navigation-bar-list-item-link"><i class="bi bi-file-person-fill"></i></a></li>
-      <li class="navigation-bar-list-item"><a href="#skills" class="navigation-bar-list-item-link"><i class="bi bi-gear-fill"></i></a></li>
-      <li class="navigation-bar-list-item"><a href="#projects" class="navigation-bar-list-item-link"><i class="bi bi-briefcase"></i></a></li>
-      <li class="navigation-bar-list-item"><a href="#contact" class="navigation-bar-list-item-link"><i class="bi bi-globe"></i></a></li>
+      <li class="navigation-bar-list-item"><a href="#home" class="navigation-bar-list-item-link" onclick="home()"><i class="bi bi-house-door-fill"></i></a></li>
+      <li class="navigation-bar-list-item"><a href="#about" class="navigation-bar-list-item-link" onclick="about()"><i class="bi bi-file-person-fill"></i></a></li>
+      <li class="navigation-bar-list-item"><a href="#skills" class="navigation-bar-list-item-link" onclick="skills()"><i class="bi bi-gear-fill"></i></a></li>
+      <li class="navigation-bar-list-item"><a href="#projects" class="navigation-bar-list-item-link" onclick="projects()"><i class="bi bi-briefcase"></i></a></li>
+      <li class="navigation-bar-list-item"><a href="#contact" class="navigation-bar-list-item-link" onclick="contact()"><i class="bi bi-globe"></i></a></li>
     </ul>
   </section>
   <!-- End of Navigation bar section  -->
@@ -51,7 +52,7 @@
   <!-- End of Home section  -->
 
   <!-- About section  -->
-  <section class="container-fluid about pb-5" id="about">
+  <section class="container-fluid about pb-5 hide" id="about">
     <div class="row p-4">
       <div class="col-12 d-flex justify-content-center">
         <h2 class="about-heading fs-2">About</h2>
@@ -71,8 +72,8 @@
     <div class="row ">
       <div class="col-12 col-md-5"></div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <button class="btn btn-primary about-hire-me-button text-light">HIRE ME</button>
-        <button class="btn btn-primary about-resume-button text-light ms-5">VIEW RESUME</button>
+        <button class="btn btn-primary about-hire-me-button text-light"><a href="#contact" class="anchor-button" onclick="contact()">HIRE ME</a></button>
+        <button class="btn btn-primary about-resume-button text-light ms-5"><a href="./Shameer__resume.pdf" class="anchor-button" target="_blank">VIEW RESUME</a></button>
       </div>
     </div>
   </section>
@@ -80,14 +81,14 @@
 
   <!-- Skills section  -->
 
-  <section class="container-fluid skills pt-5" id="skills">
-    <div class="row">
+  <section class="container-fluid  skills pt-5 hide" id="skills">
+    <div class="row p-4">
       <div class="col-12 d-flex justify-content-center">
-        <h2 class="skills-heading">Skills</h2>
+        <h2 class="skills-heading fs-2">Skills</h2>
       </div>
     </div>
-    <div class="vertical-line"></div>
-    <div class="row d-flex flex-row justify-content-center pt-5 mt-5">
+    
+    <div class="row d-flex flex-row justify-content-center pt-5 pr-0">
         <div class="col-8 col-md-6 d-flex justify-content-around html-css">
           <div class="skill-html">
             <div class="outer">
@@ -173,7 +174,7 @@
           </div>
         </div>
     </div>
-    <div class="row d-flex flex-row justify-content-center pt-5">
+    <div class="row d-flex flex-row justify-content-center">
       <div class="col-8 col-md-6 d-flex justify-content-around react-python">
         <div class="skill-react">
           <div class="outer">
@@ -258,56 +259,238 @@
           <figcaption>MongoDB</figcaption>
         </div>
       </div>
-  </div>
-  <div class="row d-flex flex-row justify-content-center pt-5 mt-5 ">
-    <div class="col-8 col-md-6 d-flex justify-content-around node-github pt-5 mt-5">
-      <div class="skill-node">
-        <div class="outer">
-          <div class="inner">
-            <div id="number9">
-              0%
+    </div>
+    <div class="row d-none d-md-flex flex-row justify-content-center ">
+      <div class="col-8 col-md-6 d-md-flex justify-content-around node-github">
+        <div class="skill-node">
+          <div class="outer">
+            <div class="inner">
+              <div id="number9">
+                0%
+              </div>
             </div>
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8rem" height="8rem">
+            <defs>
+              <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#DA22ff" />
+                <stop offset="100%" stop-color="#9733EE" />
+              </linearGradient>
+            </defs>
+            <circle cx="3rem" cy="3rem" r="40"
+                    stroke-linecap="round" class="circle9"/>
+          </svg>
+          <figcaption>NodeJs</figcaption>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8rem" height="8rem">
-          <defs>
-            <linearGradient id="GradientColor">
-              <stop offset="0%" stop-color="#DA22ff" />
-              <stop offset="100%" stop-color="#9733EE" />
-            </linearGradient>
-          </defs>
-          <circle cx="3rem" cy="3rem" r="40"
-                  stroke-linecap="round" class="circle9"/>
-        </svg>
-        <figcaption>NodeJs</figcaption>
-      </div>
-      <div class="skill-github">
-        <div class="outer">
-          <div class="inner">
-            <div id="number10">
-              80%
+        <div class="skill-github">
+          <div class="outer">
+            <div class="inner">
+              <div id="number10">
+                80%
+              </div>
             </div>
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8rem" height="8rem">
+            <defs>
+              <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#DA22ff" />
+                <stop offset="100%" stop-color="#9733EE" />
+              </linearGradient>
+            </defs>
+            <circle cx="3rem" cy="3rem" r="40"
+                    stroke-linecap="round" class="circle10"/>
+          </svg>
+          <figcaption>GitHub</figcaption>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8rem" height="8rem">
-          <defs>
-            <linearGradient id="GradientColor">
-              <stop offset="0%" stop-color="#DA22ff" />
-              <stop offset="100%" stop-color="#9733EE" />
-            </linearGradient>
-          </defs>
-          <circle cx="3rem" cy="3rem" r="40"
-                  stroke-linecap="round" class="circle10"/>
-        </svg>
-        <figcaption>GitHub</figcaption>
       </div>
     </div>
-  </div>
-  
   </section>
 
   <!-- End of Skills sectioin  -->
-  
+
+  <!-- Projects section  -->
+  <section class="container-fluid projects hide" id="projects">
+    <div class="row d-flex justify-content-center p-5">
+      <h2 class="projects-heading">Projects</h2>
+    </div>
+    <div class="row">
+      <!-- <div class="col-lg-1"></div> -->
+      <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+        <div class="card" style="width: 20rem;">
+          <img src="/img/p-1-home-1.JPG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Portfolio</h5>
+            <p class="card-text">This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1">More Details..</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+        <div class="card" style="width: 20rem;">
+          <img src="/img/p-1-home-1.JPG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Portfolio</h5>
+            <p class="card-text"> This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-2">More Details..</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-5">
+        <div class="card" style="width: 20rem;">
+          <img src="/img/p-1-home-1.JPG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center">Portfolio</h5>
+            <p class="card-text"> This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-3">More Details..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- modals  -->
+
+      <!-- Modal-1 -->
+      <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-7 text-dark" id="staticBackdropLabel-1">Portfolio</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal-body-list-container">
+                <li><span class="modal-heading">Project Name :</span>  portfolio</li>
+                <li><span class="modal-heading">Description :</span>  This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</li>
+                <li><span class="modal-heading">Techonologies Used :</span> HTML5, CSS3,BootStrap JavaScript,GitHub</li>
+                <li><span class="modal-heading">GitHub Repository : </span>https://github.com/shameer2762/portfolio.git</li>
+                <li><span class="modal-heading">Website URL :</span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
+      <!-- Modal-2  -->
+
+      <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-7 text-dark" id="staticBackdropLabel-2">Furniture Store</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal-body-list-container">
+                <li><span class="modal-heading">Project Name :</span> Furniture Store </li>
+                <li><span class="modal-heading">Description :</span>  This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</li>
+                <li><span class="modal-heading">Techonologies Used :</span> HTML5, CSS3,BootStrap JavaScript,GitHub</li>
+                <li><span class="modal-heading">GitHub Repository : </span>https://github.com/shameer2762/portfolio.git</li>
+                <li><span class="modal-heading">Website URL :</span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal-3  -->
+      <div class="modal fade" id="staticBackdrop-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-7 text-dark" id="staticBackdropLabel-3">Game</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="modal-body-list-container">
+                <li><span class="modal-heading">Project Name :</span> Game </li>
+                <li><span class="modal-heading">Description :</span>  This project is to create a personal portfolio website that showcases my skills, projects, and experiences as a web developer. This website will serve as an online platform for potential employers, clients, and collaborators to learn more about my work and get in touch with me.</li>
+                <li><span class="modal-heading">Techonologies Used :</span> HTML5, CSS3,BootStrap JavaScript,GitHub</li>
+                <li><span class="modal-heading">GitHub Repository : </span>https://github.com/shameer2762/portfolio.git</li>
+                <li><span class="modal-heading">Website URL :</span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End of modals  -->
+  <!-- End of projects section  -->
+
+
+  <!-- Contact section  -->
+  <section class="container-fluid contact hide" id="contact">
+    <div class="row">
+      <div class="col-12 contact-heading-container">
+        <h2 class="contact-heading">Contact</h2>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-1 col-1"></div>
+      <div class="col-md-4 col-11 order-1 order-md-0">
+        <div class="card bg-dark">
+          <div class="card-body">
+            <h5 class="card-title text-center">Get In touch</h5>
+            <!-- <p class="card-text text-light">Feel free to connect with me.</p> -->
+            <ul class="list-unstyled lh-sm p-3 bg-dark rounded-4">
+              <li class="mb-3 contact-left-card-icons-list"><i class="bi bi-geo-alt me-3"></i><label>Nellore,Andhra Pradesh,India. 524001</label></li>
+              <li class="mb-3 contact-left-card-icons-list"><i class="bi bi-envelope-at me-3"></i><label>shaikshameer2762@gmail.com</label></li>
+              <li class="mb-3 contact-left-card-icons-list"><i class="bi bi-phone me-3"></i><label>+91 62816 72941</label></li>
+            </ul>
+            <ul class="contact-social-icons d-flex flex-row justify-content-center list-unstyled">
+              <li class="me-4 contact-social-icons-list"><a href="https://www.linkedin.com/in/shameer-shaik" class="contact-social-icons-link" target="_blank"> <i class="bi bi-linkedin"></i></a></li>
+              <li class="me-4 contact-social-icons-list"><a href="https://github.com/shameer2762" class="contact-social-icons-link" target="_blank"><i class="bi bi-git"></i></a></li>
+              <li class="me-4 contact-social-icons-list"><a href="https://www.facebook.com/shameer.shaik.56211/" class="contact-social-icons-link" target="_blank"><i class="bi bi-facebook"></i></a></li>
+              <li class="me-4 contact-social-icons-list"><a href="https://web.whatsapp.com/" class="contact-social-icons-link" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+              <li class="me-4 contact-social-icons-list"><a href="https://www.instagram.com/shameershaik2762/" class="contact-social-icons-link" target="_blank"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-1 d-md-none"></div>
+      <div class="card col-md-5 col-11 mb-5 p-3 me-2 bg-dark order-0 order-md-1">
+        <div class="card-body">
+          <div class="d-flex flex-column justify-content-center">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Full name" aria-label="Full name">
+            </div>
+            <div class="mb-3">
+              <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comments"></textarea>
+            </div>
+            <div class="col text-center">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of contact section  -->
+
+  <section class="footer container-fluid bg-dark text-light pt-3 hide" id="footer">
+    <div class="row">
+      <div class="col-12  d-md-flex flex-md-row justify-content-around align-items-center d-flex flex-column">
+        <p>&copy; Copyright <span class="text-warning">@2023</span></p>
+        <p>Made with <span class="text-danger fs-4">♥</span> by <span class="author">Shameer Shaik</span></p>
+      </div>
+    </div>
+  </section>
   <!-- script files  -->
 
   <script src="./js/script.js" ></script>

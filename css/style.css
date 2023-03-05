@@ -89,6 +89,7 @@ html {
     align-items: center;
     padding-left: 0;
     padding-bottom: 0;
+    margin-bottom: 0.3rem;
   }
   .navigation-bar-list-item {
     font-size: 1.5rem;
@@ -136,9 +137,11 @@ html {
 /* About section  */
 .about {
   background-color: rgba(0, 0, 0, 0.828);
+  height: 100vh;
 }
-.about-heading {
-  grid-column: 3/-1;
+.about-heading,
+.skills-heading,
+.projects-heading {
   color: orangered;
   font-weight: bolder;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.853);
@@ -185,7 +188,7 @@ html {
 .skills {
   background-color: rgba(18, 18, 18, 0.929);
   height: 150vh;
-  background-size: cover;
+  background-size: 100% 100%;
   color: white;
   box-shadow: -4px 3px 8px rgba(14, 14, 14, 0.853);
 }
@@ -213,13 +216,8 @@ html {
   width: 2rem;
   border-radius: 50%;
   position: relative;
+  margin-left: -5rem;
 }
-/* .skill-css {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  position: relative;
-} */
 .outer {
   height: 6rem;
   width: 6rem;
@@ -286,14 +284,6 @@ html {
 .circle10 {
   animation: circle10 1.5s linear forwards;
 }
-/* .circle2 {
-  fill: none;
-  stroke: url(#GradientColor);
-  stroke-width: 14px;
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-  animation: circle2 1.5s linear forwards;
-} */
 
 @keyframes circle1 {
   100% {
@@ -365,16 +355,19 @@ svg {
   font-weight: 600;
 }
 figcaption {
-  /* margin-left: 1rem; */
   margin-top: 0.8rem;
   text-align: center;
   align-self: center;
-  /* letter-spacing: 0.07rem; */
   color: aqua;
   width: 6rem;
   font-weight: 800;
   padding: 0.5rem;
   box-shadow: 3px 3px 8px rgba(14, 14, 14, 0.853);
+}
+@media (min-height: 550px) and (max-height: 600px) {
+  .skills {
+    height: 170vh;
+  }
 }
 
 .html-css {
@@ -383,22 +376,123 @@ figcaption {
 .js-bootstrap {
   margin-bottom: 10rem;
 }
-
-@media (max-width: 768px) {
-  .react-python {
-    margin-bottom: 10rem;
-  }
-  .skills {
-    height: 150vh;
-  }
+.react-python {
+  margin-bottom: 10rem;
+}
+.node-github {
+  margin-top: -20rem;
 }
 .vertical-line {
   height: 100vh;
-  /* color: orangered; */
-  background-color: orangered;
   width: 0.5rem;
   position: fixed;
-  right: 0%;
-  top: 0%;
+  top: 0;
+  right: 0;
+  background-color: orangered;
 }
+
 /* End of Skills section  */
+
+/* projects section  */
+.projects {
+  background-color: rgba(0, 0, 0, 0.828);
+  background-size: cover;
+  color: rgb(97, 24, 24);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.924);
+}
+
+.projects-heading {
+  color: orangered;
+  font-weight: bolder;
+  box-shadow: 3px 3px 8px rgba(10, 10, 10, 0.822);
+  cursor: pointer;
+  width: 25rem !important;
+  padding: 0.8rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.modal-body {
+  color: rgb(255, 255, 255);
+  background-color: rgb(23, 23, 23);
+}
+.modal-body > ul {
+  list-style: none;
+  /* line-height: 3rem; */
+}
+.modal-body-list-container {
+  line-height: 1.8rem;
+}
+.modal-heading {
+  color: aqua;
+  font-weight: 600;
+}
+/* End of projects section  */
+
+/* Contact section  */
+.contact {
+  background-color: rgba(12, 12, 12, 0.787);
+  height: 100vh;
+}
+.contact-heading-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+.contact-heading {
+  color: orangered;
+  box-shadow: 4px 6px 10px rgb(25, 25, 25);
+  padding: 0.4rem;
+  font-weight: bolder;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: 25rem;
+}
+.card-title {
+  color: rgb(0, 255, 255);
+  font-weight: bolder;
+}
+
+.contact-social-icons-list {
+  font-size: 1.5rem;
+  transition: all 1s;
+}
+.contact-social-icons-list:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.contact-left-card-icons-list {
+  color: white;
+  font-weight: bold;
+}
+
+.contact-social-icons-link {
+  color: aqua;
+}
+.contact-social-icons-link:hover {
+  color: aqua;
+}
+.author {
+  color: aqua;
+}
+/* End of contact section  */
+
+.anchor-button {
+  text-decoration: none;
+  color: white;
+}
+.anchor-button:active {
+  text-decoration: none;
+  color: orangered;
+}
+.anchor-button:hover {
+  text-decoration: none;
+  color: orangered;
+}
+/* .footer {
+  height: 25vh;
+} */
+.hide {
+  display: none;
+}
